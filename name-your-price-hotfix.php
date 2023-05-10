@@ -7,6 +7,10 @@
  * Version: 1.0
  */
 
+if (!defined('ABSPATH')) {
+    exit; // Exit if accessed directly
+}
+
 function nyp_hotfix_enqueue_scripts() {
     if (is_product() && function_exists('WC_Name_Your_Price')) {
         wp_enqueue_script('nyp-hotfix', plugins_url('js/nmprice-hotfix.js', __FILE__), array('jquery'), '1.0', true);
